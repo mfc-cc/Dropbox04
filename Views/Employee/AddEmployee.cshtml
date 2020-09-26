@@ -1,0 +1,19 @@
+﻿@model Dropbox04.ViewModels.EmployeeAllEmployeeViewModel
+<h3>Add a new Employee</h3>
+<form asp-controller="Employee"
+      asp-action="AddEmployee" method="post">
+    <label asp-for="Employee.EmployeeId"></label>
+    <input asp-for="Employee.EmployeeId" />
+    <br />
+    <label asp-for="Employee.EmployeeName"></label>
+    <input asp-for="Employee.EmployeeName" />
+    <br />
+    <label asp-for="Employee.HourlyWage"></label>
+    <input asp-for="Employee.HourlyWage" />
+    <br />
+    <label asp-for="Department.DepartmentName"></label>
+    <select asp-for="Department.DepartmentId"
+            asp-items="@Model.DepartmentList"> </select>
+    <br />
+    <button type="submit">Add Employee</button>
+</form>
